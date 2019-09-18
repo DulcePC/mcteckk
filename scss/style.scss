@@ -546,7 +546,7 @@ footer#footer {
         img {
             width: 120px;
         }
-        a {
+        a,button{
             font-size: 12px;
             padding-right: 20px;
             color: yellow;
@@ -554,7 +554,31 @@ footer#footer {
                 margin-top: 10px;
             }
         }
-
+        .drop-container{
+            button{
+                border: none;
+                background: transparent;
+            }
+            img{
+                width: 30px;
+                height: 20px;
+                margin-right: 5px;
+            }
+            .dropdown-menu{
+                background: #000000;
+                border: 1px solid white;
+                ul{
+                   display: flex;
+                   justify-content: center;
+                   flex-direction: column;
+                   align-items: center;
+                  
+                    li{
+                        padding-top: 10px;
+                    }
+                }
+            }
+        }
         .social {
             a {
                 padding-right: 10px;
