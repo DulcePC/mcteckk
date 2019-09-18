@@ -10588,12 +10588,6 @@ p {
   }
 }
 
-@media (min-width: 768px) {
-  p {
-    font-size: 1rem;
-  }
-}
-
 h1 {
   font-size: 46px;
   color: #fff;
@@ -10679,6 +10673,10 @@ ul {
   top: 0;
   left: 0;
   z-index: 1000;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 #header > .container,
@@ -10698,12 +10696,28 @@ ul {
   #header > .container,
   #header .container-fluid {
     max-width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
 #header .btn {
   border: 2px solid white;
   padding: 9px 20px !important;
+}
+
+@media (max-width: 991.98px) {
+  #header .btn {
+    height: 50px;
+  }
+}
+
+#header .top-header {
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 #header .top-header img {
@@ -10728,6 +10742,10 @@ ul {
 #header .bottom-header {
   width: 100%;
   height: 60px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 #header .bottom-header .logo {
@@ -10877,10 +10895,6 @@ ul {
           box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.33);
 }
 
-#header.scroll .top-header {
-  display: none !important;
-}
-
 @media (max-width: 991.98px) {
   #content {
     padding-top: 50px;
@@ -10958,12 +10972,14 @@ ul {
   height: 15px;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 767.98px) {
   #introduction {
     padding-bottom: 20px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    height: auto;
+    padding: 30px;
   }
 }
 
@@ -11038,7 +11054,6 @@ ul {
           align-items: center;
   height: 100%;
   min-height: 270px;
-  background-attachment: fixed;
 }
 
 #games .grid-games .item-game .link-game {
@@ -11067,6 +11082,11 @@ ul {
   margin-bottom: 16px;
 }
 
+#games .grid-games .item-game .link-game .link:hover {
+  font-weight: 800;
+  color: white;
+}
+
 #games .grid-games .item-game .link-game img {
   max-width: 280px;
   height: auto;
@@ -11090,7 +11110,7 @@ ul {
 }
 
 #games .grid-games .battle {
-  background-image: url(../img/battle.jpg) !important;
+  background-image: url(../img/battle.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
